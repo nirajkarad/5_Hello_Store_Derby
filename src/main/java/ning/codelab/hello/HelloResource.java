@@ -9,10 +9,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.google.inject.Inject;
-
 import ning.codelab.hello.persist.HelloPersistence;
 import ning.jmx.Managed;
+
+import com.google.inject.Inject;
 
 /**
  * Initially, a small class that implements a "message service." For
@@ -100,8 +100,7 @@ public class HelloResource
     public String putHello(final @PathParam("who") String who, final @PathParam("hello") String hello)
     {
         putHelloImpl(who, hello);
-
-        return "OK";
+        return who +" : "+hello+"\n";
     }
 
     /**

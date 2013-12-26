@@ -18,7 +18,7 @@ public class HelloResourceManagementTest
 
         assert "hello, world".equals(theHello.getMessage("somebody"));
         assert 2 == theHello.getHitCount();
-
+        
         theHello.resetHitCount();
         assert 0 == theHello.getHitCount();
     }
